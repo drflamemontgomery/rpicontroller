@@ -1,0 +1,15 @@
+{
+    "Z" : ["a"],
+    "X" : ["b"],
+    "C" : ["x"],
+    "V" : ["y"],
+    "Left" : ["left"],
+    "Right" : ["right"],
+    "Up" : ["up"],
+    "Down" : ["down"],
+    "A" : ["lStickX -1.0"],
+    "S" : ["lStickY 1.0"],
+    "D" : ["lStickX 1.0"],
+    "W" : ["lStickY -1.0"],
+    "Escape" : ["home"]
+}
