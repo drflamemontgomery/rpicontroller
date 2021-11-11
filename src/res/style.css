@@ -26,8 +26,269 @@ button:active {
     background: #222;
 }
 
+.bitmapLabel {
+    position: absolute;
+    text-color: #00f;
+}
+
 input {
-    background-color: #fff;
-    text-color: #000;
+    background-color: #666;
+    text-color: #fff;
     width: 300;
+}
+
+#status {
+    text-color: #000;
+    /*background-color: ;*/
+    align: left middle;
+}
+
+button.circle_large:hover button.circle_medium:hover button.circle_small:hover button.rect_wide:hover button.rect_wide:hover{
+    background: none;
+}
+
+.circle_large .circle_medium .circle_small, .rect_wide .rect_tall {
+    width: 100%;
+}
+
+#btn_l_stick {
+    position: absolute;
+    x: 65px;
+    y: 191px;
+}
+
+#btn_l_stick_label {
+    position: absolute;
+    x: 80px;
+    y: 210px;
+    src: url("label_l_stick.png");
+}
+
+#btn_r_stick {
+    position: absolute;
+    x: 237px;
+    y: 255px;
+}
+
+#btn_r_stick_label {
+    position: absolute;
+    x: 252px;
+    y: 274px;
+    src: url("label_r_stick.png");
+}
+
+#btn_a {
+    position: absolute;
+    x: 355px;
+    y: 210px;
+}
+
+#btn_a_label {
+    position: absolute;
+    x: 364px;
+    y: 219px;
+    src: url("label_A.png");
+}
+
+
+
+#btn_y {
+    position: absolute;
+    x: 296px;
+    y: 210px;
+}
+
+#btn_y_label {
+    position: absolute;
+    x: 305px;
+    y: 220px;
+    src: url("label_Y.png");
+}
+
+#btn_x {
+    position: absolute;
+    x: 325px;
+    y: 182px;
+}
+
+#btn_x_label {
+    position: absolute;
+    x: 334px;
+    y: 191px;
+    src: url("label_X.png");
+}
+
+#btn_b {
+    position: absolute;
+    x: 325px;
+    y: 239px;
+}
+
+#btn_b_label {
+    position: absolute;
+    x: 336px;
+    y: 248px;
+    src: url("label_B.png");
+}
+
+#btn_minus {
+    position: absolute;
+    x: 144px;
+    y: 182px;
+}
+
+#btn_minus_label {
+    position: absolute;
+    x: 155px;
+    y: 194px;
+    src: url("label_minus.png");
+}
+
+#btn_plus {
+    position: absolute;
+    x: 271px;
+    y: 182px;
+}
+
+#btn_plus_label {
+    position: absolute;
+    x: 279px;
+    y: 190px;
+    src: url("label_plus.png");
+}
+
+#btn_home {
+    position: absolute;
+    x: 243px;
+    y: 213px;
+}
+
+#btn_home_label {
+    position: absolute;
+    x: 251px;
+    y: 220px;
+    src: url("label_home.png");
+}
+
+#btn_capture {
+    position: absolute;
+    x: 172px;
+    y: 213px;
+}
+
+#btn_capture_label {
+    position: absolute;
+    x: 180px;
+    y: 221.5px;
+    src: url("label_capture.png");
+}
+
+#btn_up {
+    position: absolute;
+    x: 140px;
+    y: 251px;
+}
+
+#btn_up_label {
+    position: absolute;
+    x: 150px;
+    y: 260px;
+    src: url("label_up.png");
+}
+
+#btn_down {
+    position: absolute;
+    x: 140px;
+    y: 309px;
+}
+
+#btn_down_label {
+    position: absolute;
+    x: 150px;
+    y: 321px;
+    src: url("label_down.png");
+}
+
+#btn_left {
+    position: absolute;
+    x: 111px;
+    y: 280px;
+}
+
+#btn_left_label {
+    position: absolute;
+    x: 120px;
+    y: 290px;
+    src: url("label_left.png");
+}
+
+#btn_right {
+    position: absolute;
+    x: 170px;
+    y: 280px;
+}
+
+#btn_right_label {
+    position: absolute;
+    x: 182px;
+    y: 290px;
+    src: url("label_right.png");
+}
+
+#btn_l {
+    position: absolute;
+    x: 55px;
+    y: 95px;
+}
+
+#btn_l_label {
+    position: absolute;
+    x: 105px;
+    y: 106px;
+    src: url("label_L.png");
+}
+
+#btn_r {
+    position: absolute;
+    x: 279px;
+    y: 95px;
+}
+
+#btn_r_label {
+    position: absolute;
+    x: 327px;
+    y: 106px;
+    src: url("label_R.png");
+}
+
+#btn_zl {
+    position: absolute;
+    x: 88px;
+    y: 0px;
+}
+
+#btn_zl_label {
+    position: absolute;
+    x: 97px;
+    y: 35px;
+    src: url("label_ZL.png");
+}
+
+#btn_zr {
+    position: absolute;
+    x: 311px;
+    y: 0px;
+}
+
+#btn_zr_label {
+    position: absolute;
+    x: 318px;
+    y: 35px;
+    src: url("label_ZR.png");
+}
+
+#back {
+    position: absolute;
+    x: -50px;
+    y: 50px;
 }

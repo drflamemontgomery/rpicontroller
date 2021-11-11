@@ -1,0 +1,52 @@
+button {
+    background: #333;
+    fill-width: true;
+    height: 30;
+    width: 60;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 5;
+}
+
+text {
+    text-color: #fff;
+    valign: middle;
+}
+
+button text {
+    align: middle middle;
+}
+
+
+
+button:hover {
+    background: #444;
+}
+
+#new_btn #back {
+    text-color: #fff;
+}
+
+#button_id {
+    valign: middle;
+    margin-left: 10px;
+    min-width: 100px;
+    text-color: #000;
+    scale-x: 2;
+    scale-y: 2;
+}
+
+#key_id {
+    margin-left: 10px;
+    scale-x: 2;
+    scale-y: 2;
+    text-color: #000;
+}
+
+#delete {
+    offset: 40 0;
+}
+
+flow {
+    multiline : true;
+}
