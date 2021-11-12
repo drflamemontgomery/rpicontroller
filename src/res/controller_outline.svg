@@ -2,14 +2,14 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="58.085732mm"
-   height="56.893829mm"
-   viewBox="0 0 58.085732 56.893829"
+   width="4.4813266mm"
+   height="4.5488343mm"
+   viewBox="0 0 4.4813266 4.5488342"
    version="1.1"
    id="svg5"
    inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
    sodipodi:docname="controller_outline.svg"
-   inkscape:export-filename="/home/looking/heaps/controller/src/res/controller_outline.png"
+   inkscape:export-filename="/home/looking/heaps/controller/src/res/circle_medium_hover.png"
    inkscape:export-xdpi="192.41"
    inkscape:export-ydpi="192.41"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -30,9 +30,9 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:zoom="2.7061714"
-     inkscape:cx="140.05026"
-     inkscape:cy="105.86913"
+     inkscape:zoom="1.3530857"
+     inkscape:cx="-113.07488"
+     inkscape:cy="22.54107"
      inkscape:window-width="1356"
      inkscape:window-height="758"
      inkscape:window-x="0"
@@ -45,7 +45,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-34.549597,-80.316924)">
+     transform="translate(-150.59199,-73.349531)">
     <g
        id="g5274"
        style="stroke-width:0.7;stroke-miterlimit:4;stroke-dasharray:none">
@@ -64,6 +64,15 @@
            cx="55.134811"
            cy="110.35296"
            r="4.5273666" />
+        <circle
+           style="fill:#b3b3b3;stroke:#000000;stroke-width:0.7;stroke-miterlimit:4;stroke-dasharray:none"
+           id="path3975-0"
+           cx="143.34068"
+           cy="76.462067"
+           r="4.5273666"
+           inkscape:export-filename="/home/looking/heaps/controller/src/res/circle_large_hover.png"
+           inkscape:export-xdpi="192.41"
+           inkscape:export-ydpi="192.41" />
         <circle
            style="fill:none;stroke:#000000;stroke-width:0.7;stroke-miterlimit:4;stroke-dasharray:none"
            id="path3975-3"
@@ -105,6 +114,16 @@
                  cy="110.38591"
                  rx="1.8906634"
                  ry="1.9244173" />
+              <ellipse
+                 style="fill:#b3b3b3;stroke:#000000;stroke-width:0.7;stroke-miterlimit:4;stroke-dasharray:none"
+                 id="path4123-6-7-5-6"
+                 cx="159.94257"
+                 cy="75.71286"
+                 rx="1.8906634"
+                 ry="1.9244173"
+                 inkscape:export-filename="/home/looking/heaps/controller/src/res/circle_medium_hover.png"
+                 inkscape:export-xdpi="192.41"
+                 inkscape:export-ydpi="192.41" />
             </g>
           </g>
         </g>
@@ -156,6 +175,16 @@
            r="1.4023619"
            transform="scale(-1,1)" />
         <circle
+           style="fill:#b3b3b3;stroke:#000000;stroke-width:0.7;stroke-miterlimit:4;stroke-dasharray:none"
+           id="path4600-0-2"
+           cx="-180.88449"
+           cy="76.853149"
+           r="1.4023619"
+           transform="scale(-1,1)"
+           inkscape:export-filename="/home/looking/heaps/controller/src/res/circle_small_hover.png"
+           inkscape:export-xdpi="192.41"
+           inkscape:export-ydpi="192.41" />
+        <circle
            style="fill:none;stroke:#000000;stroke-width:0.7;stroke-miterlimit:4;stroke-dasharray:none"
            id="path4600-7-9"
            cx="-79.210205"
@@ -182,6 +211,18 @@
          rx="3"
          ry="1.9970043" />
       <rect
+         style="fill:#b3b3b3;stroke:#000000;stroke-width:0.7;stroke-miterlimit:4;stroke-dasharray:none"
+         id="rect4903-3-6"
+         width="13.863266"
+         height="4.75986"
+         x="116.98035"
+         y="61.076164"
+         rx="3"
+         ry="1.9970043"
+         inkscape:export-filename="/home/looking/heaps/controller/src/res/rect_wide_hover.png"
+         inkscape:export-xdpi="192.41"
+         inkscape:export-ydpi="192.41" />
+      <rect
          style="fill:none;stroke:#000000;stroke-width:0.7;stroke-miterlimit:4;stroke-dasharray:none"
          id="rect5150"
          width="5.2689247"
@@ -199,6 +240,18 @@
          y="80.666924"
          rx="3.0000045"
          ry="1.9970036" />
+      <rect
+         style="fill:#b3b3b3;stroke:#000000;stroke-width:0.7;stroke-miterlimit:4;stroke-dasharray:none"
+         id="rect5150-6-1"
+         width="5.2689247"
+         height="10.537849"
+         x="144.35854"
+         y="53.546028"
+         rx="3.0000045"
+         ry="1.9970036"
+         inkscape:export-filename="/home/looking/heaps/controller/src/res/rect_tall_hover.png"
+         inkscape:export-xdpi="192.41"
+         inkscape:export-ydpi="192.41" />
     </g>
   </g>
 </svg>

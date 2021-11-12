@@ -86,6 +86,8 @@ class ContainerComp extends h2d.Flow implements h2d.domkit.Object {
 
     static var SRC = <container>
 	<button public id="config"/>
+	<button public id="save"/>
+	<button public id="disconnect"/>
 	<button public id="btn"/>
 	<input public id="host"/>
 	<text public id="status"/>
@@ -171,6 +173,38 @@ class ButtonBodyComp extends h2d.Flow implements h2d.domkit.Object {
 	<text public id="key_id" />
 	<button public id="delete" />
 	</buttonBody>;
+
+    public function new(align:h2d.Flow.FlowAlign, ?parent) {
+	super(parent);
+	initComponent();
+    }
+}
+
+
+@:uiComp("joystickChoice")
+class JoystickChoiceComp extends h2d.Flow implements h2d.domkit.Object {
+    static var SRC = <joystickChoice>
+        <bitmap src={tile} public id="border"/>
+	<button public id="axis_x" />
+	<button public id="axis_y" />
+	<button public id="click" />
+        <bitmapButton public id="close" />
+	</joystickChoice>;
+
+    public function new(align:h2d.Flow.FlowAlign, tile:h2d.Tile, ?parent) {
+	super(parent);
+	initComponent();
+    }
+}
+
+
+@:uiComp("axisBody")
+class AxisBodyComp extends h2d.Flow implements h2d.domkit.Object {
+    static var SRC = <axisBody>
+	<text public id="key_id" />
+	<input public id="value" />
+	<button public id="delete" />
+	</axisBody>;
 
     public function new(align:h2d.Flow.FlowAlign, ?parent) {
 	super(parent);

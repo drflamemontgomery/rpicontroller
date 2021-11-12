@@ -292,3 +292,39 @@ button.circle_large:hover button.circle_medium:hover button.circle_small:hover b
     x: -50px;
     y: 50px;
 }
+
+
+
+
+#border {
+    position: absolute;
+    x: -400;
+}
+
+
+#axis_x {
+    position: absolute;
+    x: -300;
+    y: 40;
+    width: 50px;
+}
+
+#axis_y {
+    position: absolute;
+    x: -230;
+    y: 40;
+    width: 50px;
+}
+
+#click {
+    position: absolute;
+    x: -160;
+    y: 40;
+    width: 50px;
+}
+
+#close {
+    position: absolute;
+    x: -380;
+    y: 45;
+}

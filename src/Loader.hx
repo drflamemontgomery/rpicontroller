@@ -17,46 +17,46 @@ class Loader {
 
     static public function getButtons(controller:ControllerState):Map<String, Dynamic> {
         return [
-		"a" => function(isDown:Bool) {
+		"btn_a" => function(isDown:Bool) {
 		    controller.a = isDown;
 		},
-		"b" => function(isDown:Bool) {
+		"btn_b" => function(isDown:Bool) {
 		    controller.b = isDown;
 		},
-		"x" => function(isDown:Bool) {
+		"btn_x" => function(isDown:Bool) {
 		    controller.x = isDown;
 		},
-		"y" => function(isDown:Bool) {
+		"btn_y" => function(isDown:Bool) {
 		    controller.y = isDown;
 		},
-		"l" => function(isDown:Bool) {
+		"btn_l" => function(isDown:Bool) {
 		    controller.l = isDown;
 		},
-		"r" => function(isDown:Bool) {
+		"btn_r" => function(isDown:Bool) {
 		    controller.r = isDown;
 		},
-		"zl" => function(isDown:Bool) {
+		"btn_zl" => function(isDown:Bool) {
 		    controller.zl = isDown;
 		},
-		"zr" => function(isDown:Bool) {
+		"btn_zr" => function(isDown:Bool) {
 		    controller.zr = isDown;
 		},
-		"home" => function(isDown:Bool) {
+		"btn_home" => function(isDown:Bool) {
 		    controller.home = isDown;
 		},
-		"capture" => function(isDown:Bool) {
+		"btn_capture" => function(isDown:Bool) {
 		    controller.capture = isDown;
 		},
-		"plus" => function(isDown:Bool) {
+		"btn_plus" => function(isDown:Bool) {
 		    controller.plus = isDown;
 		},
-		"minus" => function(isDown:Bool) {
+		"btn_minus" => function(isDown:Bool) {
 		    controller.minus = isDown;
 		},
-		"lClick" => function(isDown:Bool) {
+		"btn_l_stick" => function(isDown:Bool) {
 		    controller.l_stick.clicked = isDown;
 		},
-		"rClick" => function(isDown:Bool) {
+		"btn_r_stick" => function(isDown:Bool) {
 		    controller.r_stick.clicked = isDown;
 		},
 		];
@@ -64,7 +64,7 @@ class Loader {
 
     static public function getDpad(controller:ControllerState):Map<String, Dynamic> {
 	return [
-		"left" => function(isDown:Bool, key:String) {
+		"btn_left" => function(isDown:Bool, key:String) {
 		    if(isDown) {
 			controller.dpad.horizontal.push({ key : key,
 				    value : HatStickHorizontalState.LEFT }
@@ -77,7 +77,7 @@ class Loader {
 			}
 		    }
 		},
-		"right" => function(isDown:Bool, key:String) {
+		"btn_right" => function(isDown:Bool, key:String) {
 		    if(isDown) {
 			controller.dpad.horizontal.push({ key : key,
 				    value : HatStickHorizontalState.RIGHT }
@@ -90,7 +90,7 @@ class Loader {
 			}
 		    }
 		},
-		"up" => function(isDown:Bool, key:String) {
+		"btn_up" => function(isDown:Bool, key:String) {
 		    if(isDown) {
 			controller.dpad.vertical.push({ key : key,
 				    value : HatStickVerticalState.UP }
@@ -103,7 +103,7 @@ class Loader {
 			}
 		    }
 		},
-		"down" => function(isDown:Bool, key:String) {
+		"btn_down" => function(isDown:Bool, key:String) {
 		    if(isDown) {
 			controller.dpad.vertical.push({ key : key,
 				    value : HatStickVerticalState.DOWN }
@@ -122,7 +122,7 @@ class Loader {
     static public function getAxis(controller:ControllerState):Map<String, Dynamic> {
 	
 	return [
-		"lStickX" => function(isDown:Bool, key:String, value:Float) {
+		"btn_l_stick_x" => function(isDown:Bool, key:String, value:Float) {
 		    if(isDown) {
 			controller.l_stick.axisX.push({ key : key,
 				    value : value }
@@ -135,7 +135,7 @@ class Loader {
 			}
 		    }
 		},
-		"lStickY" => function(isDown:Bool, key:String, value:Float) {
+		"btn_l_stick_y" => function(isDown:Bool, key:String, value:Float) {
 		    if(isDown) {
 			controller.l_stick.axisY.push({ key : key,
 				    value : value }
@@ -148,7 +148,7 @@ class Loader {
 			}
 		    }
 		},
-		"rStickX" => function(isDown:Bool, key:String, value:Float) {
+		"btn_r_stick_x" => function(isDown:Bool, key:String, value:Float) {
 		    if(isDown) {
 			controller.r_stick.axisX.push({ key : key,
 				    value : value }
@@ -161,7 +161,7 @@ class Loader {
 			}
 		    }
 		},
-		"rStickY" => function(isDown:Bool, key:String, value:Float) {
+		"btn_r_stick_y" => function(isDown:Bool, key:String, value:Float) {
 		    if(isDown) {
 			controller.r_stick.axisY.push({ key : key,
 				    value : value }

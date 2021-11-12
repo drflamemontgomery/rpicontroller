@@ -1,19 +1,2 @@
 {
-    "Z" : ["a"],
-    "X" : ["b"],
-    "C" : ["x"],
-    "V" : ["y"],
-    "Left" : ["left"],
-    "Right" : ["right"],
-    "Up" : ["up"],
-    "Down" : ["down"],
-    "A" : ["l"],
-    "S" : ["r"],
-    "Q" : ["minus"],
-    "W" : ["x"],
-    "Escape" : ["plus"],
-    "F1" : ["home"],
-    "MouseLeft" : ["left"],
-    "MouseRight" : ["right"],
-    "MouseMiddle" : ["a"]
 }

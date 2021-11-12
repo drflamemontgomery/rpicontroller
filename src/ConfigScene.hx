@@ -2,11 +2,73 @@ package;
 import GUI;
 class ConfigScene {
 
-    var style = null;
+    var style : h2d.domkit.Style = null;
     var controller : h2d.Bitmap;
     public var center : h2d.Flow;
     var width : Int = 0;
     var height : Int = 0;
+
+    function genBtn(btn:BitmapButtonComp, light:h2d.Tile, dark:h2d.Tile) {
+	btn.tile = light;
+        btn.onHover = function() { btn.tile = dark; };
+        btn.onOut = function() { btn.tile = light; };
+	btn.onClick = function() {
+	    
+	    Main.ME.buttonmapScene.load(btn.name);
+
+	    Main.ME.inputLayer.visible = false;
+	    Main.ME.configLayer.visible = false;
+	    Main.ME.buttonMapLayer.visible = true;
+	    Main.ME.axisMapLayer.visible = false;
+	};
+    }
+    
+    function genAxis(btn:BitmapButtonComp, light:h2d.Tile, dark:h2d.Tile) {
+	genBtn(btn, light, dark);
+
+	btn.onClick = function() {
+	    var win = new JoystickChoiceComp(Right, hxd.Res.load("border.png").toTile(), center);
+	    win.axis_x.label = "Axis X";
+
+	    win.axis_x.onClick = function() {
+		Main.ME.axismapScene.load('${btn.name}_x');
+
+		Main.ME.inputLayer.visible = false;
+		Main.ME.configLayer.visible = false;
+		Main.ME.buttonMapLayer.visible = false;
+		Main.ME.axisMapLayer.visible = true;
+	    };
+	    
+	    win.axis_y.label = "Axis Y";
+	    win.axis_y.onClick = function() {
+		Main.ME.axismapScene.load('${btn.name}_y');
+
+		Main.ME.inputLayer.visible = false;
+		Main.ME.configLayer.visible = false;
+		Main.ME.buttonMapLayer.visible = false;
+		Main.ME.axisMapLayer.visible = true;
+	    };
+	    
+	    win.click.label  = "Click";
+
+	    win.click.onClick = function() {
+		Main.ME.buttonmapScene.load(btn.name);
+
+		Main.ME.inputLayer.visible = false;
+		Main.ME.configLayer.visible = false;
+		Main.ME.buttonMapLayer.visible = true;
+		Main.ME.axisMapLayer.visible = false;
+	    };
+	    
+	    style.addObject(win);
+
+	    win.close.tile = hxd.Res.load("back.png").toTile();
+	    win.close.onClick = function() {
+	        style.removeObject(win);
+		win.remove();
+	    };
+	};
+    }
     
     public function new(?parent:h2d.Object) {
 	center = new h2d.Flow(parent);
@@ -33,79 +95,33 @@ class ConfigScene {
 	    Main.ME.inputLayer.visible = true;
 	    Main.ME.configLayer.visible = false;
 	    Main.ME.buttonMapLayer.visible = false;
+	    Main.ME.axisMapLayer.visible = false;
 	};
-	
-	root.btn_l_stick.tile = circle_large;
-	root.btn_l_stick.onHover = function() { root.btn_l_stick.tile = circle_large_hover; };
-	root.btn_l_stick.onOut = function() { root.btn_l_stick.tile = circle_large; };
-	root.btn_r_stick.tile = circle_large;
-	root.btn_r_stick.onHover = function() { root.btn_r_stick.tile = circle_large_hover; };
-	root.btn_r_stick.onOut = function() { root.btn_r_stick.tile = circle_large; };
 
-	root.btn_y.tile = circle_medium;
-	root.btn_y.onHover = function() { root.btn_y.tile = circle_medium_hover; };
-	root.btn_y.onOut = function() { root.btn_y.tile = circle_medium; };
+	genAxis(root.btn_l_stick, circle_large, circle_large_hover);
+	genAxis(root.btn_r_stick, circle_large, circle_large_hover);
 	
-	root.btn_b.tile = circle_medium;
-	root.btn_b.onHover = function() { root.btn_b.tile = circle_medium_hover; };
-	root.btn_b.onOut = function() { root.btn_b.tile = circle_medium; };
+	genBtn(root.btn_y, circle_medium, circle_medium_hover);
+	genBtn(root.btn_b, circle_medium, circle_medium_hover);
+	genBtn(root.btn_a, circle_medium, circle_medium_hover);
+	genBtn(root.btn_x, circle_medium, circle_medium_hover);
 
+	genBtn(root.btn_up, circle_medium, circle_medium_hover);
+	genBtn(root.btn_down, circle_medium, circle_medium_hover);
+	genBtn(root.btn_left, circle_medium, circle_medium_hover);
+	genBtn(root.btn_right, circle_medium, circle_medium_hover);
 
-	root.btn_a.tile = circle_medium;
-	root.btn_a.onHover = function() { root.btn_a.tile = circle_medium_hover; };
-	root.btn_a.onOut = function() { root.btn_a.tile = circle_medium; };
-	
-	root.btn_x.tile = circle_medium;
-	root.btn_x.onHover = function() { root.btn_x.tile = circle_medium_hover; };
-	root.btn_x.onOut = function() { root.btn_x.tile = circle_medium; };
-	
-	root.btn_up.tile = circle_medium;
-	root.btn_up.onHover = function() { root.btn_up.tile = circle_medium_hover; };
-	root.btn_up.onOut = function() { root.btn_up.tile = circle_medium; };
-	
-	root.btn_down.tile = circle_medium;
-	root.btn_down.onHover = function() { root.btn_down.tile = circle_medium_hover; };
-	root.btn_down.onOut = function() { root.btn_down.tile = circle_medium; };
-	
-	root.btn_left.tile = circle_medium;
-	root.btn_left.onHover = function() { root.btn_left.tile = circle_medium_hover; };
-	root.btn_left.onOut = function() { root.btn_left.tile = circle_medium; };
-	
-	root.btn_right.tile = circle_medium;
-	root.btn_right.onHover = function() { root.btn_right.tile = circle_medium_hover; };
-	root.btn_right.onOut = function() { root.btn_right.tile = circle_medium; };
+	genBtn(root.btn_plus, circle_small, circle_small_hover);
+	genBtn(root.btn_minus, circle_small, circle_small_hover);
+	genBtn(root.btn_home, circle_small, circle_small_hover);
+	genBtn(root.btn_capture, circle_small, circle_small_hover);
 
-	root.btn_plus.tile = circle_small;
-	root.btn_plus.onHover = function() { root.btn_plus.tile = circle_small_hover; };
-	root.btn_plus.onOut = function() { root.btn_plus.tile = circle_small; };
-	
-	root.btn_minus.tile = circle_small;
-	root.btn_minus.onHover = function() { root.btn_minus.tile = circle_small_hover; };
-	root.btn_minus.onOut = function() { root.btn_minus.tile = circle_small; };
-	
-	root.btn_home.tile = circle_small;
-	root.btn_home.onHover = function() { root.btn_home.tile = circle_small_hover; };
-	root.btn_home.onOut = function() { root.btn_home.tile = circle_small; };
-	
-	root.btn_capture.tile = circle_small;
-	root.btn_capture.onHover = function() { root.btn_capture.tile = circle_small_hover; };
-	root.btn_capture.onOut = function() { root.btn_capture.tile = circle_small; };
+	genBtn(root.btn_l, rect_wide, rect_wide_hover);
+	genBtn(root.btn_r, rect_wide, rect_wide_hover);
 
-	root.btn_l.tile = rect_wide;
-	root.btn_l.onHover = function() { root.btn_l.tile = rect_wide_hover; };
-	root.btn_l.onOut = function() { root.btn_l.tile = rect_wide; };
+	genBtn(root.btn_zl, rect_tall, rect_tall_hover);
+	genBtn(root.btn_zr, rect_tall, rect_tall_hover);
 	
-	root.btn_r.tile = rect_wide;
-	root.btn_r.onHover = function() { root.btn_r.tile = rect_wide_hover; };
-	root.btn_r.onOut = function() { root.btn_r.tile = rect_wide; };
-
-	root.btn_zl.tile = rect_tall;
-	root.btn_zl.onHover = function() { root.btn_zl.tile = rect_tall_hover; };
-	root.btn_zl.onOut = function() { root.btn_zl.tile = rect_tall; };
-	
-	root.btn_zr.tile = rect_tall;
-	root.btn_zr.onHover = function() { root.btn_zr.tile = rect_tall_hover; };
-	root.btn_zr.onOut = function() { root.btn_zr.tile = rect_tall; };
 	
 	style = new h2d.domkit.Style();
 	style.load(hxd.Res.style);

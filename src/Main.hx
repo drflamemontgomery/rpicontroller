@@ -1,13 +1,16 @@
 //PARAM=-lib domkit
 class Main extends hxd.App {
 
-    var inputScene : InputScene;
+    public var inputScene : InputScene;
     var configScene : ConfigScene;
     public var buttonmapScene : ButtonMapScene;
+    public var axismapScene : AxisMapScene;
     
     public var inputLayer : h2d.Layers;
     public var configLayer : h2d.Layers;
     public var buttonMapLayer : h2d.Layers;
+    public var axisMapLayer : h2d.Layers;
+    var background : h2d.Bitmap;
 
     public static var ME : Main;
     
@@ -19,21 +22,27 @@ class Main extends hxd.App {
     override function init() {
 	hxd.Window.getInstance().onClose = this.onClose;
 	ME = this;
-	var background = new h2d.Bitmap(h2d.Tile.fromColor(0xFFFFFF, 800, 600, 1), s2d);
+        background = new h2d.Bitmap(h2d.Tile.fromColor(0xFFFFFF, 800, 600, 1), s2d);
 	inputLayer = new h2d.Layers(s2d);
 	configLayer = new h2d.Layers(s2d);
 	buttonMapLayer = new h2d.Layers(s2d);
+	axisMapLayer = new h2d.Layers(s2d);
+	
 	inputScene = new InputScene(inputLayer);
 	configScene = new ConfigScene(configLayer);
 	buttonmapScene = new ButtonMapScene(buttonMapLayer);
+	axismapScene = new AxisMapScene(axisMapLayer);
 	onResize();
 
-	inputLayer.visible = false;
+	inputLayer.visible = true;
 	configLayer.visible = false;
-	buttonMapLayer.visible = true;
+	buttonMapLayer.visible = false;
+	axisMapLayer.visible = false;
     }
 
     override function onResize() {
+	background.width = s2d.width;
+	background.height = s2d.height;
 	inputScene.center.minWidth = inputScene.center.maxWidth = s2d.width;
 	inputScene.center.minHeight = inputScene.center.maxHeight = s2d.height;
         configScene.center.minWidth = configScene.center.maxWidth = s2d.width;
@@ -49,6 +58,9 @@ class Main extends hxd.App {
 	}
 	if(buttonMapLayer.visible) {
 	    buttonmapScene.update(dt);
+	}
+	if(axisMapLayer.visible) {
+	    axismapScene.update(dt);
 	}
     }
 
