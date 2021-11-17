@@ -1,0 +1,7 @@
+-cp src
+-lib heaps
+-lib hldx
+-lib domkit
+-hl bin/main.hl
+-main Main
+-debug
