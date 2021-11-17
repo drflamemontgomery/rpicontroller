@@ -2,6 +2,6 @@
 
 <h2>Prerequisites</h2>
 
-haxe
+<p>haxe
 hashlink
-Heaps.io
+Heaps.io</p>
